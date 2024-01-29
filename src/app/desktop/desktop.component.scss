@@ -1,0 +1,46 @@
+.home{
+    background-image: url('../../assets/images/70001212-33c2-4be1-9c82-8a9ceb1fe6db.jpg');
+    background-size: cover;
+    background-position: center center;
+}
+
+.content{
+    width: 70%;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+    border: 1px white solid;
+   
+}
+.my-input{
+    border-radius: 25px;
+}
+
+.my-button{
+    border-radius: 25px;
+}
+.my-button a{
+    text-decoration: none;
+    
+}
+.my-icon{
+    text-decoration: none;
+    margin-right: 10px;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.line{
+    border: 1px solid white;
+    width: 90%;
+}
+
+.update {
+    color: #1bb0f0;
+}
+.delete{
+    color:red;
+}
+.count{
+    color: white;
+}

@@ -1,0 +1,67 @@
+
+<div class="page2 ">
+  <div class="my-class container d-fles justify-content-center align-items-center">
+    <form class="bg-white m-5 px-5 " (ngSubmit)="submitRegister(registerForm)" [formGroup]="registerForm">
+      <div class="text-center mb-5 ">
+        <img class=" rounded-circle mx-3 mt-4 " src="../../assets/images/3.jpg" >
+        <h3>Upload photo</h3>
+
+      </div>
+      
+        <div class="row">
+            <div class="col-lg-6">
+              <input type="text" formControlName="firstName"
+               required 
+               class="form-control rounded-pill p-2 mb-2" 
+               placeholder="First name" aria-label="firstName">
+               <div *ngIf="registerForm.get('firstName')?.errors && registerForm.get('firstName')?.touched"
+             class="alert alert-danger my-2">
+                <p *ngIf="registerForm.get('firstName')?.errors?.['required']" class="mb-0">firstName is required</p>
+                <p *ngIf="registerForm.get('firstName')?.errors?.['minlength']" class="mb-0">firstName minLength is 3</p>
+                <p *ngIf="registerForm.get('firstName')?.errors?.['maxlength']" class="mb-0">firstName maxLength is 8</p>
+            </div>
+             
+            </div>
+            <div class="col-lg-6">
+                <input type="text" formControlName="lastName"
+                 required 
+                 class="form-control rounded-pill p-2 mb-2" 
+                 placeholder="last name" aria-label="lastName">
+                 <div *ngIf="registerForm.get('lastName')?.errors && registerForm.get('lastName')?.touched"
+               class="alert alert-danger my-2">
+                  <p *ngIf="registerForm.get('lastName')?.errors?.['required']" class="mb-0">lastName is required</p>
+                  <p *ngIf="registerForm.get('lastName')?.errors?.['minlength']" class="mb-0">lastName minLength is 3</p>
+                  <p *ngIf="registerForm.get('lastName')?.errors?.['maxlength']" class="mb-0">lastName maxLength is 8</p>
+              </div>
+               
+              </div>
+            <div class="col-lg-6">
+                <input type="tel" required class="form-control rounded-pill my-5 p-2" placeholder="Phone number" aria-label="Phone number">
+                
+            </div>
+              <div class="col-lg-6">
+                <input type="text" formControlName="email"
+                 required  
+                 class="form-control rounded-pill p-2 mt-5 mb-2" 
+                 placeholder="email" aria-label="email">
+                 <div *ngIf="registerForm.get('email')?.errors && registerForm.get('email')?.touched"
+                  class="alert alert-danger">
+                  <p *ngIf="registerForm.get('email')?.errors?.['required']" class="mb-0">email is required</p>
+                  <p *ngIf="registerForm.get('email')?.errors?.['email']" class="mb-0">email invalid</p>
+              </div>
+               
+              </div>
+    
+    <div class="row ">
+      <div class="col-12 mb-4 d-flex justify-content-between align-content-center">
+        <button class="btn btn-secondary px-5 py-2 my-3  "type="reset">Cancel</button>
+        <button class="btn btn-info px-5 py-2 my-3  text-light " type="submit">Save</button>
+      </div>
+    </div>
+          </div>
+    </form>
+  </div>
+</div>
+    
+
+
